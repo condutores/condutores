@@ -1,0 +1,81 @@
+	<ion-view view-title="Parceiros" hide-nav-bar="false" >
+		<!-- content -->
+		<ion-content delegate-handle="top" lazy-scroll  id="page-parceiros" class=" page-parceiros">
+					<!-- code refresh -->
+			<ion-refresher pulling-text="{{ 'Pull to refresh...' | translate }}"  on-refresh="doRefresh()"></ion-refresher>
+			<!-- ./code refresh -->
+			
+
+			<!-- code search -->
+			<ion-list class="card list" >
+				<div class="item item-input">
+					<i class="icon ion-search placeholder-icon"></i>
+					<input type="search" ng-model="filter_parceiross" placeholder="{{ 'Busque a cidade' | translate }}" aria-label="filter parceiross" />
+				</div>
+			</ion-list>
+            <!-- ./code search -->
+            
+            
+          <ion-list class="card list">
+	    
+	
+	    
+	    
+	    
+	        <div class="item item-input item-select">
+	            <span class="input-label">Cidade</span>
+	            <select ng-click="form_sort()" ng-model="filter_parceiross" name="sort_by"  >
+	                <option value="Aracati">Aracati</option>
+	                <option value="Icapuí">Icapuí</option>
+	                <option value="Limoeiro do Norte">Limoeiro do Norte</option>
+	                <option value="Quixeré">Quixeré</option>
+	                <option value="Aquiraz">Aquiraz</option>
+	                <option value="Russas">Russas</option>
+	                <option value="Jaguaribe">Jaguaribe</option>
+	                <option value="Itaiçaba">Itaiçaba</option>
+	            </select>
+	        </div>
+	    
+	  
+	  
+
+	  
+</ion-list>
+
+
+
+
+			<!-- code listing -->
+			<div class="list animate-none">
+				<div class="list card" ng-repeat="item in parceiross | filter:filter_parceiross as results" ng-init="$last ? fireEvent() : null" href="#/condutores/parceiros_singles/{{item.id}}" >
+					<div class="item item-dark"  ng-bind-html="item.parceiro | to_trusted"></div>
+					<div class="item item-thumbnail-left item-text-wrap">
+						<img alt="" class="full-image" image-lazy-loader="lines" image-lazy-src="{{item.logo}}"   />
+						<p >
+						Benefício:  {{item.beneficio}}
+						<br>
+						Cidade:  {{item.cidade}}
+						</p>
+				
+				</div>
+					<a class="item button button-dark dark ink" href="#/condutores/parceiros_singles/{{item.id}}">Mais Detalhes</a>
+				</div>
+			</div>
+			<!-- ./code listing -->
+			<!-- code infinite scroll -->
+			<ion-list class="list">
+				<ion-infinite-scroll ng-if="!noMoreItemsAvailable" on-infinite="onInfinite()" distance="5px" ng-if="hasMoreData"></ion-infinite-scroll>
+			</ion-list>
+			<!-- ./code infinite scroll -->
+
+
+			<!-- code search result not found -->
+			<ion-list class="list">
+				<div class="item" ng-if="results.length == 0" >
+					<p>{{ 'No results found...!' | translate }}</p>
+				</div>
+			</ion-list>
+			<!-- code search result not found -->
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>

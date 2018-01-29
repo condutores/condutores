@@ -1,0 +1,54 @@
+	<ion-view view-title="Menu" hide-nav-bar="false" >
+		<!-- content -->
+		<ion-content delegate-handle="top" lazy-scroll  id="page-slide_tab_menu" class=" page-slide_tab_menu">
+		
+	<div style="width: 100%;height:100%;">
+		<ion-slide-box class="ion-slide-tabs" slide-tabs-scrollable="false" show-pager="false" ion-slide-tabs>
+			<ion-slide ion-slide-tab-label="Dashboard" >
+					<ion-content scroll="false" class="slidingTabContent">
+						<div class="list">
+							<a class="item item-icon-left" ng-href="#/condutores/carro" >
+								<i class="icon ion-android-favorite" ></i>
+								<h2>{{ "Carro" | translate }}</h2>
+								<span class="item-note pull-left">Example Menu 1</span>
+							</a>
+							<a class="item item-icon-left" ng-href="#/condutores/caminho" >
+								<i class="icon ion-android-favorite" ></i>
+								<h2>{{ "Caminh&atilde;o" | translate }}</h2>
+								<span class="item-note pull-left">Example Menu 2</span>
+							</a>
+						</div>
+					</ion-content>
+			</ion-slide>
+			<ion-slide ion-slide-tab-label="Bicicleta" >
+					<ion-content scroll="false" class="slidingTabContent">
+						<div class="list">
+							<a class="item item-icon-left" ng-href="#/condutores/motocicleta" >
+								<i class="icon ion-android-chat" ></i>
+								<h2>{{ "Motocicleta" | translate }}</h2>
+								<span class="item-note pull-left">FAQs and Tutorial</span>
+							</a>
+							<a class="item item-icon-left" ng-click="openURL('market://details?id=com.imabuilder.condutores.condutores')" >
+								<i class="icon ion-android-playstore" ></i>
+								<h2>{{ "Parceiros" | translate }}</h2>
+								<span class="item-note pull-left">Taking a moment to rate this app?</span>
+							</a>
+							<a class="item item-icon-left" ng-href="#/condutores/carto" >
+								<i class="icon ion-ios-pricetag" ></i>
+								<h2>{{ "Cart&atilde;o" | translate }}</h2>
+								<span class="item-note pull-left"></span>
+							</a>
+							<a class="item item-icon-left" ng-href="#/condutores/classificado" >
+								<i class="icon ion-ios-pause-outline" ></i>
+								<h2>{{ "Classificado" | translate }}</h2>
+								<span class="item-note pull-left"></span>
+							</a>
+						</div>
+					</ion-content>
+			</ion-slide>
+		</ion-slide-box>
+	</div>
+
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>

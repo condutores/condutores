@@ -1,0 +1,59 @@
+	<ion-view view-title="{{ parceiros.parceiro }}" hide-nav-bar="false" >
+		<!-- content -->
+		<ion-content delegate-handle="top" lazy-scroll scroll="true"   id="page-parceiros_singles" class="page-parceiros_singles">
+					<ion-refresher pulling-text="Pull to refresh..."  on-refresh="doRefresh()"></ion-refresher>
+			<div class="list ">
+
+					<!-- heading-1 -->
+					<div class="item item-divider"  ng-bind-html="parceiros.parceiro | to_trusted">{{parceiros.parceiro}}</div>
+					<!-- ./heading-1 -->
+
+					<!-- images -->
+					<div class="item noborder"><img class="full-image" image-lazy-loader="lines" image-lazy-src="{{parceiros.logo}}"   zoom-view="true" zoom-src="{{parceiros.logo}}"/></div>
+					<!-- ./images -->
+
+					<!-- to_trusted -->
+					<div class="item item-text-wrap noborder to_trusted {{ fontsize }}" ng-bind-html="parceiros.informacoes | strHTML"></div>
+					<!-- ./to_trusted -->
+
+					<!-- to_trusted -->
+					<div class="item item-text-wrap noborder to_trusted {{ fontsize }}" ng-bind-html="parceiros.endereco | strHTML"></div>
+					<!-- ./to_trusted -->
+
+					<!-- to_trusted -->
+					<div class="item item-text-wrap noborder to_trusted {{ fontsize }}" ng-bind-html="parceiros.cidade | strHTML"></div>
+					<!-- ./to_trusted -->
+
+					<!-- to_trusted -->
+					<div class="item item-text-wrap noborder to_trusted {{ fontsize }}" ng-bind-html="parceiros.estado | strHTML"></div>
+					<!-- ./to_trusted -->
+
+					<!-- to_trusted -->
+					<div class="item item-text-wrap noborder to_trusted {{ fontsize }}" ng-bind-html="parceiros.telefone | strHTML"></div>
+					<!-- ./to_trusted -->
+
+					<!-- text -->
+					<div class="item"><span class="subdued" >Benefício{{parceiros.beneficio}}</span></div>
+					<!-- ./text -->
+
+					<!-- gmap -->
+					<div class="item noborder">
+						<div ng-if="mapEnable" class="embed_container" data-tap-disabled="true">
+							<ng-map zoom="16" width="100%" center="{{parceiros.lat}}">
+								<marker position="{{parceiros.lat}}" ></marker>
+							</ng-map>
+						</div>
+					</div>
+					<!-- ./gmap -->
+			</div>
+			<div class="list">
+				<div class="item tabs tabs-secondary tabs-icon-left tabs-stable">
+					<a class="tab-item" ng-click="addToDbVirtual(parceiros);"><i class="icon ion-android-add-circle"></i> {{ 'Adicionar ao marcador' | translate }}</a>
+					<a class="tab-item" ng-href="#/condutores/parceiros_bookmark"><i class="icon ion-ios-star"></i> {{ 'Selecionados' | translate }}</a>
+				</div>
+			</div>
+			<br/><br/><br/>
+
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>

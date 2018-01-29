@@ -1,0 +1,49 @@
+	<ion-view view-title="{{ carro.title }}" hide-nav-bar="false" >
+		<!-- content -->
+		<ion-content delegate-handle="top" lazy-scroll scroll="true"   id="page-carro_singles" class="page-carro_singles">
+		
+			<ion-refresher pulling-text="Pull to refresh..."  on-refresh="doRefresh()"></ion-refresher>
+			<div class="tabs tabs-dark tabs-icon-top static">
+				<a ng-click="$ionicGoBack()" class="tab-item">
+					<i class="icon ion-ios-albums-outline"></i> {{ 'List' | translate }}
+				</a>
+				<a class="tab-item tab-item-active active">
+					<i class="icon ion-ios-list-outline"></i> {{ 'Detail' | translate }}
+				</a>
+				</div>
+			<div class="list ">
+
+					<!-- heading-1 -->
+					<div class="item item-divider"  ng-bind-html="carro.title | to_trusted">{{carro.title}}</div>
+					<!-- ./heading-1 -->
+
+					<!-- to_trusted -->
+					<div class="item item-text-wrap noborder to_trusted {{ fontsize }}" ng-bind-html="carro.content | strHTML"></div>
+					<!-- ./to_trusted -->
+
+					<!-- text -->
+					<div class="item"><span class="subdued" >Author : {{carro.author.name}}</span></div>
+					<!-- ./text -->
+
+					<!-- text -->
+					<div class="item"><span class="subdued" >Published : {{carro.x_published}}</span></div>
+					<!-- ./text -->
+
+					<!-- text -->
+					<div class="item"><span class="subdued" >Updated : {{carro.x_updated}}</span></div>
+					<!-- ./text -->
+
+					<!-- share_link -->
+					<div class="item">
+						<button run-social-sharing message="{{ carro.x_link.attributes.href }}" class="button button-small ion-android-share-alt button-outline button-positive icon-left">Social Share</button>
+					</div>
+					<!-- ./share_link -->
+
+					<!-- link -->
+					<!-- ./link -->
+			</div>
+			<br/><br/><br/>
+
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>
