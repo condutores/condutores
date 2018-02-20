@@ -3,7 +3,7 @@ angular.module("condutores", ["ngCordova","ionic","ionMdInput","ionic-material",
 
 		$rootScope.appName = "Condutores das Americas" ;
 		$rootScope.appLogo = "data/images/IconeApp-192x192.png" ;
-		$rootScope.appVersion = "1.0" ;
+		$rootScope.appVersion = "5.63.1" ;
 		$rootScope.headerShrink = false ;
 
 		$ionicPlatform.ready(function() {
@@ -420,7 +420,7 @@ angular.module("condutores", ["ngCordova","ionic","ionMdInput","ionic-material",
 
 	.state("condutores.parceiros_singles", {
 		url: "/parceiros_singles/:id",
-		cache:false,
+		cache:true,
 		views: {
 			"condutores-side_menus" : {
 						templateUrl:"templates/condutores-parceiros_singles.html",
