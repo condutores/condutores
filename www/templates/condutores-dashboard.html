@@ -1,51 +1,27 @@
-	<ion-view view-title="Condutores das Am&eacute;ricas" hide-nav-bar="false" >
+	<ion-view view-title="Condutores das Am&eacute;ricas" hide-nav-bar="true" >
 		<!-- content -->
 		<ion-content delegate-handle="top" lazy-scroll  id="page-dashboard" class=" page-dashboard">
-		<br><br><br><br><br><br><br><br><br><br><br>
-		<div class="dashboard-panel">
+				<br><br><br><br><br><br><br><br><br><br><br><br><br><div class="dashboard-panel">
 			<!-- row -->
 			<div class="row">
-				<a class="col-33 light no-border"  ng-href="#/condutores/carro" >
-					<img src="data/images/carros.png" style="ng-click="nextpage()" >
-					<p>{{ "Carro" | translate }}</p>
+				<a class="col-33 no-border"  ng-href="#/condutores/carto" >
+					<i class="icon ion-card Energized" ></i>
+					<p>{{ "Cart&atilde;o" | translate }}</p>
 				</a>
-				
-				<a class="col-33 light no-border"  ng-href="#/condutores/caminho" >
-					<img src="data/images/caminhao.png" style="ng-click="nextpage()" >
-					<p>{{ "Caminh&atilde;o" | translate }}</p>
+				<a class="col-33 no-border "  ng-href="#/condutores/sobre" >
+					<i class="icon ion-android-favorite" ></i>
+					<p>{{ "Sobre" | translate }}</p>
 				</a>
-				
-				<a class="col-33 light no-border"  ng-href="#/condutores/bicicleta" >
-					<img src="data/images/bike.png" style="ng-click="nextpage()" >
-					<p>{{ "Bicicleta" | translate }}</p>
-				</a>
-				
-			</div>
-			<!-- ./row -->
-			
-
-			<!-- row -->
-			<div class="row">
-				<a class="col-33 light no-border"  ng-href="#/condutores/motocicleta" >
-													<img src="data/images/moto.png" style="ng-click="nextpage()" >
-													<p>{{ "Motocicleta" | translate }}</p>
-								</a>
-				
-				<a class="col-33 light no-border"  ng-href="#/condutores/parceiros" >
-					<img src="data/images/parceiros.png" style="ng-click="nextpage()" >
-					<p>{{ "Parceiros" | translate }}</p>
-				</a>
-				<a class="col-33 light no-border"  ng-href="#/condutores/cartao" >
-									<img src="data/images/cartao.png" style="ng-click="nextpage()" >
-									<p>{{ "V&iacute;deos" | translate }}</p>
+				<a class="col-33 no-border "  ng-href="#/condutores/parceiros" >
+					<i class="icon ion-android-people" ></i>
+					<p>{{ "parceiros" | translate }}</p>
 				</a>
 			</div>
 			<!-- ./row -->
-			
-
 			
 
 		</div>
+
 		</ion-content>
 		<!-- ./content -->
 	</ion-view>

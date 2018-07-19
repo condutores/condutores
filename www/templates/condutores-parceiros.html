@@ -1,9 +1,10 @@
 	<ion-view view-title="Parceiros" hide-nav-bar="false" >
 		<!-- content -->
 		<ion-content delegate-handle="top" lazy-scroll  id="page-parceiros" class=" page-parceiros">
-					<!-- code refresh -->
-			<ion-refresher pulling-text="{{ 'Pull to refresh...' | translate }}"  on-refresh="doRefresh()"></ion-refresher>
-			<!-- ./code refresh -->
+			<!-- code refresh -->
+				<ion-refresher pulling-text="{{ 'Puxe para atualizar...' | translate }}"  on-refresh="doRefresh()"></ion-refresher>
+				<!-- ./code refresh -->
+			
 			
 
 			<!-- code search -->
@@ -26,13 +27,17 @@
 	            <span class="input-label">Cidade</span>
 	            <select ng-click="form_sort()" ng-model="filter_parceiross" name="sort_by"  >
 	                <option value="Aracati">Aracati</option>
+	                 <option value="Aquiraz">Aquiraz</option>
 	                <option value="Icapuí">Icapuí</option>
 	                <option value="Limoeiro do Norte">Limoeiro do Norte</option>
 	                <option value="Quixeré">Quixeré</option>
-	                <option value="Aquiraz">Aquiraz</option>
+	                <option value="Fortaleza">Fortaleza</option>
 	                <option value="Russas">Russas</option>
 	                <option value="Jaguaribe">Jaguaribe</option>
 	                <option value="Itaiçaba">Itaiçaba</option>
+	                
+	                Itaiçaba
+
 	            </select>
 	        </div>
 	    
@@ -52,11 +57,15 @@
 					<div class="item item-thumbnail-left item-text-wrap">
 						<img alt="" class="full-image" image-lazy-loader="lines" image-lazy-src="{{item.logo}}"   />
 						<p >
-						Benefício:  {{item.beneficio}}
-						<br>
+										
+						
+						<b><div class="item item-text-wrap noborder to_trusted {{ fontsize }}" ng-bind-html="parceiros.beneficio | strHTML"></b>
+						
+						
+						
 						Cidade:  {{item.cidade}}
 						</p>
-				
+						
 				</div>
 					<a class="item button button-dark dark ink" href="#/condutores/parceiros_singles/{{item.id}}">Mais Detalhes</a>
 				</div>
