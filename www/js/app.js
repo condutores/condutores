@@ -3,7 +3,7 @@ angular.module("condutores", ["ngCordova","ionic","ionMdInput","ionic-material",
 
 		$rootScope.appName = "Condutores das Americas" ;
 		$rootScope.appLogo = "data/images/IconeApp-192x192.png" ;
-		$rootScope.appVersion = "5.63.1" ;
+		$rootScope.appVersion = "5.63.9" ;
 		$rootScope.headerShrink = false ;
 
 		$ionicPlatform.ready(function() {
@@ -158,94 +158,11 @@ angular.module("condutores", ["ngCordova","ionic","ionMdInput","ionic-material",
 
 	.state("condutores.about_us", {
 		url: "/about_us",
+		cache:false,
 		views: {
 			"condutores-side_menus" : {
 						templateUrl:"templates/condutores-about_us.html",
 						controller: "about_usCtrl"
-					},
-			"fabButtonUp" : {
-						template: '',
-					},
-		}
-	})
-
-	.state("condutores.bicicleta", {
-		url: "/bicicleta",
-		cache:false,
-		views: {
-			"condutores-side_menus" : {
-						templateUrl:"templates/condutores-bicicleta.html",
-						controller: "bicicletaCtrl"
-					},
-			"fabButtonUp" : {
-						template: '',
-					},
-		}
-	})
-
-	.state("condutores.bicicleta_singles", {
-		url: "/bicicleta_singles/:id",
-		cache:false,
-		views: {
-			"condutores-side_menus" : {
-						templateUrl:"templates/condutores-bicicleta_singles.html",
-						controller: "bicicleta_singlesCtrl"
-					},
-			"fabButtonUp" : {
-						template: '',
-					},
-		}
-	})
-
-	.state("condutores.caminho", {
-		url: "/caminho",
-		cache:false,
-		views: {
-			"condutores-side_menus" : {
-						templateUrl:"templates/condutores-caminho.html",
-						controller: "caminhoCtrl"
-					},
-			"fabButtonUp" : {
-						template: '',
-					},
-		}
-	})
-
-	.state("condutores.caminho_singles", {
-		url: "/caminho_singles/:id",
-		cache:false,
-		views: {
-			"condutores-side_menus" : {
-						templateUrl:"templates/condutores-caminho_singles.html",
-						controller: "caminho_singlesCtrl"
-					},
-			"fabButtonUp" : {
-						template: '',
-					},
-		}
-	})
-
-	.state("condutores.carro", {
-		url: "/carro",
-		cache:false,
-		views: {
-			"condutores-side_menus" : {
-						templateUrl:"templates/condutores-carro.html",
-						controller: "carroCtrl"
-					},
-			"fabButtonUp" : {
-						template: '',
-					},
-		}
-	})
-
-	.state("condutores.carro_singles", {
-		url: "/carro_singles/:id",
-		cache:false,
-		views: {
-			"condutores-side_menus" : {
-						templateUrl:"templates/condutores-carro_singles.html",
-						controller: "carro_singlesCtrl"
 					},
 			"fabButtonUp" : {
 						template: '',
@@ -260,34 +177,6 @@ angular.module("condutores", ["ngCordova","ionic","ionMdInput","ionic-material",
 			"condutores-side_menus" : {
 						templateUrl:"templates/condutores-carto.html",
 						controller: "cartoCtrl"
-					},
-			"fabButtonUp" : {
-						template: '',
-					},
-		}
-	})
-
-	.state("condutores.classificado", {
-		url: "/classificado",
-		cache:false,
-		views: {
-			"condutores-side_menus" : {
-						templateUrl:"templates/condutores-classificado.html",
-						controller: "classificadoCtrl"
-					},
-			"fabButtonUp" : {
-						template: '',
-					},
-		}
-	})
-
-	.state("condutores.classificados", {
-		url: "/classificados",
-		cache:false,
-		views: {
-			"condutores-side_menus" : {
-						templateUrl:"templates/condutores-classificados.html",
-						controller: "classificadosCtrl"
 					},
 			"fabButtonUp" : {
 						template: '',
@@ -362,27 +251,12 @@ angular.module("condutores", ["ngCordova","ionic","ionMdInput","ionic-material",
 		}
 	})
 
-	.state("condutores.motocicleta", {
-		url: "/motocicleta",
-		cache:false,
+	.state("condutores.parceiparceirosros", {
+		url: "/parceiparceirosros",
 		views: {
 			"condutores-side_menus" : {
-						templateUrl:"templates/condutores-motocicleta.html",
-						controller: "motocicletaCtrl"
-					},
-			"fabButtonUp" : {
-						template: '',
-					},
-		}
-	})
-
-	.state("condutores.motocicleta_singles", {
-		url: "/motocicleta_singles/:id",
-		cache:false,
-		views: {
-			"condutores-side_menus" : {
-						templateUrl:"templates/condutores-motocicleta_singles.html",
-						controller: "motocicleta_singlesCtrl"
+						templateUrl:"templates/condutores-parceiparceirosros.html",
+						controller: "parceiparceirosrosCtrl"
 					},
 			"fabButtonUp" : {
 						template: '',
@@ -392,7 +266,7 @@ angular.module("condutores", ["ngCordova","ionic","ionMdInput","ionic-material",
 
 	.state("condutores.parceiros", {
 		url: "/parceiros",
-		cache:false,
+		cache:true,
 		views: {
 			"condutores-side_menus" : {
 						templateUrl:"templates/condutores-parceiros.html",
@@ -466,20 +340,6 @@ angular.module("condutores", ["ngCordova","ionic","ionMdInput","ionic-material",
 			"condutores-side_menus" : {
 						templateUrl:"templates/condutores-vdeos.html",
 						controller: "vdeosCtrl"
-					},
-			"fabButtonUp" : {
-						template: '',
-					},
-		}
-	})
-
-	.state("condutores.vdeos_singles", {
-		url: "/vdeos_singles/:snippetresourceIdvideoId",
-		cache:false,
-		views: {
-			"condutores-side_menus" : {
-						templateUrl:"templates/condutores-vdeos_singles.html",
-						controller: "vdeos_singlesCtrl"
 					},
 			"fabButtonUp" : {
 						template: '',
