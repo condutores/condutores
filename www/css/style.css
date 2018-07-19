@@ -236,14 +236,9 @@ ul.rating li i{color:#FFCC00}
 .menu .bar.bar-header.expanded img{margin:auto;left:16px;right:16px;}
 
 /** option page **/
-#page-bicicleta{background: url("../data/images/background/black.jpg") no-repeat left top fixed;background-size: cover;width:100%;height:100%;background-repeat:no-repeat;}
-#page-caminho{background: url("../data/images/bgpages.jpg") no-repeat left top fixed;background-size: cover;width:100%;height:100%;background-repeat:no-repeat;}
-#page-carro{background: url("../data/images/bgpages.jpg") no-repeat left top fixed;background-size: cover;width:100%;height:100%;background-repeat:no-repeat;}
-#page-carto{background: url("../data/images/background/black.jpg") no-repeat left top fixed;background-size: cover;width:100%;height:100%;background-repeat:no-repeat;}
-#page-classificado{background: url("../data/images/background/black.jpg") no-repeat left top fixed;background-size: cover;width:100%;height:100%;background-repeat:no-repeat;}
+#page-carto{background: url("../data/images/background/bg6.jpg") no-repeat left top fixed;background-size: cover;width:100%;height:100%;background-repeat:no-repeat;}
 #page-dashboard{background: url("../data/images/AppL.jpg") no-repeat left top fixed;background-size: cover;width:100%;height:100%;background-repeat:no-repeat;}
 #page-inicial{background: url("../data/images/bk022.jpg") no-repeat left top fixed;background-size: cover;width:100%;height:100%;background-repeat:no-repeat;}
-#page-motocicleta{background: url("../data/images/bgpages.jpg") no-repeat left top fixed;background-size: cover;width:100%;height:100%;background-repeat:no-repeat;}
 #page-parceiros{background: url("../data/images/background/black.jpg") no-repeat left top fixed;background-size: cover;width:100%;height:100%;background-repeat:no-repeat;}
 #page-sobre{background: url("../data/images/background/black.jpg") no-repeat left top fixed;background-size: cover;width:100%;height:100%;background-repeat:no-repeat;}
 /** page dashboard **/
