@@ -1,45 +1,118 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" />
-		<title>Condutores</title>
-		<link href="lib/ionic/css/ionic.min.css" rel="stylesheet" />
-		<link href="lib/ionic-material/ionic.material.min.css" rel="stylesheet" />
-		<link href="lib/ion-md-input/css/ion-md-input.min.css" rel="stylesheet" />
-		<link href="lib/ion-datetime-picker/ion-datetime-picker.min.css" rel="stylesheet" />
-		<link href="css/style.css" rel="stylesheet" />
-	</head>
-	<body ng-app="condutores" ng-controller="indexCtrl" id="{{ page_id }}">
-		<ion-nav-bar class="navbar-title bar-dark">
-			<ion-nav-back-button>
-			</ion-nav-back-button>
-		</ion-nav-bar>
-		<ion-nav-view animation="none"></ion-nav-view>
-		
-		<script src="lib/ionic/js/angular-chart/Chart.min.js"></script>
-		<script src="lib/localforage/localforage.min.js"></script>
-		<script src="lib/ionic/js/ionic.bundle.min.js"></script>
-		<script src="lib/ionic/js/angular-dynamic-locale/tmhDynamicLocale.min.js"></script>
-		<script src="lib/ionic/js/angular-translate/angular-translate.min.js"></script>
-		<script src="lib/ionic/js/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
-		<script src="lib/ionic/js/angular-utf8-base64/angular-utf8-base64.js"></script>
-		<script src="lib/ionic/js/angular-chart/angular-chart.min.js"></script>
-		<script src="lib/ionic/js/angular-md5/angular-md5.min.js"></script>
-		<script src="lib/ionic-material/ionic.material.min.js"></script>
-		<script src="lib/ion-md-input/js/ion-md-input.min.js"></script>
-		<script src="lib/ionic-rating/ionic-rating.min.js"></script>
-		<script src="lib/ion-slide-tabs/js/slidingTabsDirective.js"></script>
-		<script src="lib/ion-datetime-picker/ion-datetime-picker.min.js"></script>
-		<script src="lib/ionic/js/angular-google-maps/ng-map.min.js"></script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAa2ImvAmc4QEyRsq1mHBIMZ5cKTWZNiUY&callback"></script>
-		<script src="lib/ionic-image-lazy-load/ionic-image-lazy-load.js"></script>
-		<script src="lib/ionic/js/angular-cordova/ng-cordova.min.js"></script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+		<title></title>
+
+		<!-- build:css styles/vendor.css -->
+		<!-- bower:css -->
+		<link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
+		<!-- endbower -->
+		<!-- endbuild -->
+		<link href="styles/main.css" rel="stylesheet">
+
+		<!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+		<link href="styles/ionic.app.css" rel="stylesheet">
+		-->
+
+		<!-- ionic/angularjs js -->
+		<!-- build:js scripts/vendor.js -->
+		<script src="bower_components/conversion.js/conversion.js"></script>
+		<!-- bower:js -->
+		<script src="bower_components/angular/angular.js"></script>
+		<script src="bower_components/angular-animate/angular-animate.js"></script>
+		<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+		<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+		<script src="bower_components/ionic/release/js/ionic.js"></script>
+		<script src="bower_components/ionic/release/js/ionic-angular.js"></script>
+		<script src="bower_components/angular-websocket/angular-websocket.min.js"></script>
+		<script src="bower_components/ngCordova/dist/ng-cordova.js"></script>
+		<script src="bower_components/lodash/lodash.js"></script>
+		<script src="bower_components/angular-base64/angular-base64.js"></script>
+		<script src="bower_components/date.format/date.format.js"></script>
+		<script src="bower_components/geolib/dist/geolib.js"></script>
+		<script src="bower_components/ng-cordova-oauth/dist/ng-cordova-oauth.js"></script>
+		<script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+		<script src="bower_components/ionic-toast/dist/ionic-toast.bundle.min.js"></script>
+		<script src="bower_components/ionic-rating/ionic-rating.js"></script>
+		<script src="bower_components/firebase/firebase.js"></script>
+		<script src="bower_components/angularfire/dist/angularfire.js"></script>
+		<!-- endbower -->
+		<!-- endbuild -->
+
 		<!-- cordova script (this will be a 404 during development) -->
 		<script src="cordova.js"></script>
+		<script src="lib/ionic.cloud.min.js"></script>
 		<!-- your app's js -->
-		<script src="js/app.js"></script>
-		<script src="js/controllers.js"></script>
-		<script src="js/services.js"></script>
+		<!-- build:js scripts/scripts.js -->
+		<!-- include: "type": "js", "files": ["scripts/**/*.module.js", "scripts/**/*.js"] -->
+		<script src="scripts/businesses.module.js"></script>
+		<script src="scripts/businesses/businesses.module.js"></script>
+		<script src="scripts/catalogs/catalogs.module.js"></script>
+		<script src="scripts/common/common.module.js"></script>
+		<script src="scripts/contact-us/contact-us.module.js"></script>
+		<script src="scripts/drupal/drupal.module.js"></script>
+		<script src="scripts/favorites/favorite-businesses.module.js"></script>
+		<script src="scripts/map/map.module.js"></script>
+		<script src="scripts/menu/menu.module.js"></script>
+		<script src="scripts/news/news.module.js"></script>
+		<script src="scripts/products/products.module.js"></script>
+		<script src="scripts/push/push.module.js"></script>
+		<script src="scripts/reviews/reviews.module.js"></script>
+		<script src="scripts/services/services.module.js"></script>
+		<script src="scripts/wordpress/wordpress.module.js"></script>
+		<script src="scripts/app.js"></script>
+		<script src="scripts/businesses/business.controller.js"></script>
+		<script src="scripts/businesses/businesses.controller.js"></script>
+		<script src="scripts/businesses/businesses.service.js"></script>
+		<script src="scripts/catalogs/catalog.controller.js"></script>
+		<script src="scripts/catalogs/catalogs.controller.js"></script>
+		<script src="scripts/catalogs/catalogs.service.js"></script>
+		<script src="scripts/common/directives/gmaps/gmaps.directive.js"></script>
+		<script src="scripts/common/services/data/data.service.js"></script>
+		<script src="scripts/common/services/data/extended-firebase-data.service.js"></script>
+		<script src="scripts/common/services/data/firebase-data.service.js"></script>
+		<script src="scripts/common/services/data/local-data.service.js"></script>
+		<script src="scripts/common/services/data/remote-data.service.js"></script>
+		<script src="scripts/common/services/distance.service.js"></script>
+		<script src="scripts/common/services/extenal-apps.service.js"></script>
+		<script src="scripts/common/services/html-to-plain-text.service.js"></script>
+		<script src="scripts/common/services/open-hours.service.js"></script>
+		<script src="scripts/configuration.js"></script>
+		<script src="scripts/contact-us/contact-us.controller.js"></script>
+		<script src="scripts/drupal/drupal-article.controller.js"></script>
+		<script src="scripts/drupal/drupal-articles.controller.js"></script>
+		<script src="scripts/drupal/drupal.service.js"></script>
+		<script src="scripts/favorites/favorite-businesses.controller.js"></script>
+		<script src="scripts/favorites/favorite-businesses.service.js"></script>
+		<script src="scripts/internet-connectivity.js"></script>
+		<script src="scripts/map/map.controller.js"></script>
+		<script src="scripts/map/map.service.js"></script>
+		<script src="scripts/menu/menu.controller.js"></script>
+		<script src="scripts/news/article.controller.js"></script>
+		<script src="scripts/news/articles.controller.js"></script>
+		<script src="scripts/news/news.service.js"></script>
+		<script src="scripts/products/product.controller.js"></script>
+		<script src="scripts/products/products.controller.js"></script>
+		<script src="scripts/products/products.service.js"></script>
+		<script src="scripts/push/push-sender.service.js"></script>
+		<script src="scripts/push/push-token.service.js"></script>
+		<script src="scripts/push/push.controller.js"></script>
+		<script src="scripts/reviews/reviews.controller.js"></script>
+		<script src="scripts/reviews/reviews.service.js"></script>
+		<script src="scripts/services/service.controller.js"></script>
+		<script src="scripts/services/services.controller.js"></script>
+		<script src="scripts/services/services.service.js"></script>
+		<script src="scripts/spinner.js"></script>
+		<script src="scripts/wordpress/wordpress-article.controller.js"></script>
+		<script src="scripts/wordpress/wordpress-articles.controller.js"></script>
+		<script src="scripts/wordpress/wordpress.service.js"></script>
+		<!-- /include -->
+		<!-- endbuild -->
+	</head>
+
+	<body ng-app="bizdir">
+		<ion-nav-view></ion-nav-view>
 	</body>
 </html>
